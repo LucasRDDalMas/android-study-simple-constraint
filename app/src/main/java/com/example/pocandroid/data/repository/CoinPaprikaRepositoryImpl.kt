@@ -9,7 +9,6 @@ import javax.inject.Inject
 
 class CoinPaprikaRepositoryImpl @Inject constructor(private val coinPaprikaApi: CoinPaprikaApi): CoinPaprikaRepository {
     override suspend fun getCoins(): List<Coin> {
-        Log.i("sad", "sad")
         return coinPaprikaApi.getCoins().map { it.toCoin() }
     }
 

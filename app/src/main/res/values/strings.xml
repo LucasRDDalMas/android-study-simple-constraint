@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">POC Android - Constraint</string>
+    <string name="list_exchange">List Exchange</string>
 </resources>

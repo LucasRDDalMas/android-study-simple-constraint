@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.coin_list.CoinListActivity">
+    tools:context=".presentation.get_exchanges.ExchangeListActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/coin_list_item" />
+        tools:listitem="@layout/exchange_list_item" />
 
     <ProgressBar
         android:id="@+id/pb_spinner"
@@ -34,7 +34,7 @@
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/gray"
         android:contentDescription="@string/list_exchange"
-        android:src="@drawable/ic_exchange"
+        android:src="@drawable/ic_coin"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
         app:layout_constraintEnd_toEndOf="@+id/recycler_view"

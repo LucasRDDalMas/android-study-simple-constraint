@@ -3,7 +3,6 @@ package com.example.pocandroid.presentation.coin_list
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -15,14 +14,12 @@ import com.example.pocandroid.common.Resource
 import com.example.pocandroid.domain.use_case.get_coins.GetCoinsUseCase
 import com.example.pocandroid.presentation.get_exchanges.ExchangeListActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import javax.inject.Inject
+import org.koin.android.ext.android.inject
 
-@AndroidEntryPoint
 class CoinListActivity: AppCompatActivity() {
-    @Inject lateinit var getCoinsUseCase: GetCoinsUseCase
+    private val getCoinsUseCase: GetCoinsUseCase by inject()
     private lateinit var recyclerView: RecyclerView
     private lateinit var spinner: ProgressBar
     private lateinit var btnExchange: FloatingActionButton

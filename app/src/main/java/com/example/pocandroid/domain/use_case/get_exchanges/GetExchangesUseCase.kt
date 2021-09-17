@@ -7,9 +7,8 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException
 import java.io.IOException
-import javax.inject.Inject
 
-class GetExchangesUseCase @Inject constructor(private val coinPaprikaRepository: CoinPaprikaRepository) {
+class GetExchangesUseCase(private val coinPaprikaRepository: CoinPaprikaRepository) {
     operator fun invoke(): Flow<Resource<List<Exchange>>> = flow {
         try {
             emit(Resource.Loading<List<Exchange>>())
